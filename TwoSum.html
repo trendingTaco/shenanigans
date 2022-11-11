@@ -5,6 +5,7 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 */
+--C# solution
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
        Dictionary<int, int> map = new Dictionary<int , int>();
@@ -19,3 +20,18 @@ public class Solution {
         return null;
     }
 }
+java
+                                        class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == target - nums[i]) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        // In case there is no solution, we'll just return null
+        return null;
+    }
+}
+                                        
